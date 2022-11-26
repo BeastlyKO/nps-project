@@ -52,7 +52,7 @@ export class Park extends Component {
         return (
             <div>
                 <h1 id="tabelLabel" >Parks with Biking Activity</h1>
-                <p>Here is a list of all the parks between PA, NJ, DE, and NY.</p>
+                <p>Here is a list of all the parks between PA, NJ, DE, and NY with a biking activity.</p>
                 {contents}
             </div>
         );
