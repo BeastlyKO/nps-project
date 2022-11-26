@@ -50,7 +50,7 @@ namespace nps_project.Controllers
             //Loops through four queires and updates the parks gathered to the master list.
             for (int i = 0; i < 4; i++)
             {   
-                //uses private method in order to use the get call on the API
+                //uses private method in order to get the information from the API
                 ListOfParks parks = await GetParks(i);
                 
                 //for each park gathered by the private method, add them to the master list.
@@ -82,7 +82,7 @@ namespace nps_project.Controllers
             // list which will contain parks from specific state depending on id
             List<Park> masterList = new List<Park>();
 
-            //uses private method in order to use the get call on the API
+            //uses private method in order to get a list of parks for the specific state
             ListOfParks parks = await GetParks(id);
 
             //for each park gathered by the private method, add them to the master list.
@@ -128,6 +128,7 @@ namespace nps_project.Controllers
                 response = await client.GetAsync("https://developer.nps.gov/api/v1" +
                        query).ConfigureAwait(false);
 
+                //if statement to confirm it was able to establish a connect and receive a response back
                 if (response.IsSuccessStatusCode)
                 {
                     //Read reponse and convert to string
