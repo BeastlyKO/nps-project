@@ -34,6 +34,12 @@ namespace nps_project.Controllers
             _logger = logger;
         }
 
+
+
+        /*
+          This method is to push a get request to the NPS API and request all parks with a biking activity in PA, DE, NJ and NY.
+          It will return with a master list with all the parks in all the mentioned states.
+         */
         // GET: <ParkController>
         [HttpGet]
         public async Task<IEnumerable<Park>> Get()
@@ -62,6 +68,13 @@ namespace nps_project.Controllers
             
         }
 
+
+
+        /*
+            This mehthod with send a get request for a specific state we want to get the parks for. An id is passed which then will pull a state from our state enumorator
+            and pass the GET request to the API for that particular state. This type of GET request will be used to pull filtered information depenidng on the state the
+            user chooses.
+         */
         // GET <ParkController>/5
         [HttpGet("{id}")]
         public async Task<IEnumerable<Park>> Get(int id)
@@ -86,7 +99,11 @@ namespace nps_project.Controllers
 
         }
 
-        //private method which will create a client object and conduct the GET request to the NPS API
+        /*
+         * This is a private method which will create a client object and conduct the GET request to the NPS API.
+           It will use the ID argument as a selector of which state to pull a list of parks from. It will then send the GET
+           request, parse the information retrieved. and return a list for all parks with a biking activity for a particular state 
+        */
         private async Task<ListOfParks> GetParks(int id)
         {
             //uses ID to get the desired state from the state enum object
@@ -118,14 +135,16 @@ namespace nps_project.Controllers
 
 
 
-                    //parses json
+
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
+                    //parses json
                     ListOfParks parks = JsonSerializer.Deserialize<ListOfParks>(json);
 #pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 
 
-                    //returns a list of parks from desired state
 #pragma warning disable CS8603 // Possible null reference return.
+
+                    //returns a list of parks from desired state
                     return parks;
 #pragma warning restore CS8603 // Possible null reference return.
                 }
