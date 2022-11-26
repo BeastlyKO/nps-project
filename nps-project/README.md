@@ -1,4 +1,7 @@
 ﻿
+Note: Download the latest version of Node.js onto you computer to run the applicaiton. You can download Node.js at https://nodejs.org/en/. After downloading, reopen you IDE adn the app should run.
+
+
 Please be sure to update the API Key with a valid API key, you can sign up on https://www.nps.gov/subjects/developer/index.htm to obtian a free API when you sign up.
 You must go to ParkController under controllers and update the API Key there. Otherwise the app will throw an error when access the Parks or ParksFiltered page.
 
