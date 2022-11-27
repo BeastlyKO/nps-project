@@ -22,7 +22,7 @@ namespace nps_project.Controllers
             You can go to https://www.nps.gov/subjects/developer/index.htm and sign up for free. You will get an API key which then you can 
             update on the API_Key string.
         */
-        const string API_KEY = "H0lH6eKP2De4ClAPvrHS3OtvHCZtUoBvEwP6zhuf";
+        const string API_KEY = "k3vd3ToWnX0UphPayTku5FnBNH4DAFrRujMfZqYk";
         
 
 
