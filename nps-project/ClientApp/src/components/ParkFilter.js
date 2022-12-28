@@ -15,12 +15,14 @@ export class ParkFilter extends Component {
         this.PopulateTable();
     }
 
-    componentDidUpdate() {
-        if (this.state.value == -1) {
-            this.PopulateTable();
-        }
-        else {
-            this.PopulateFilteredTable(this.state.value);
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.value != this.state.value) {
+            if (this.state.value == -1) {
+                this.PopulateTable();
+            }
+            else {
+                this.PopulateFilteredTable(this.state.value);
+            }
         }
     }
 
