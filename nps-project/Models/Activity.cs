@@ -1,13 +1,14 @@
-﻿namespace nps_project.Models
+﻿#pragma warning disable
+namespace nps_project.Models
 {
     public class Activity
     {
-#pragma warning disable CS8618 // Non-nullable property 'id' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+        //id of the activity
         public string id { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'id' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+ 
 
-#pragma warning disable CS8618 // Non-nullable property 'name' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+        //name of the activity
         public string name { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'name' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+ 
     }
 }

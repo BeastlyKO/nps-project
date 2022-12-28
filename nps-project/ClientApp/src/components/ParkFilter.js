@@ -5,7 +5,7 @@ export class ParkFilter extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { parks: [], loading: true, value: -1 }
+        this.state = { parks: [], loading: true, value: "All" }
         this.handleChange = this.handleChange.bind(this);
         
     }
@@ -54,7 +54,8 @@ export class ParkFilter extends Component {
                             <td>{park.addresses[0].line1 + ", "
                                 + park.addresses[0].city + ", "
                                 + park.addresses[0].stateCode + " "
-                                + park.addresses[0].postalCode}</td>
+                                + park.addresses[0].postalCode}
+                            </td>
                         </tr>
                     )}
                 </tbody>
@@ -78,11 +79,11 @@ export class ParkFilter extends Component {
                 <label>
                     State Filter: 
                     <select onChange={this.handleChange}>
-                        <option value="-1">All</option>
-                        <option value="0">DE</option>
-                        <option value="1">NJ</option>
-                        <option value="2">NY</option>
-                        <option value="3">PA</option>
+                        <option value="ALL">All</option>
+                        <option value="DE">DE</option>
+                        <option value="NJ">NJ</option>
+                        <option value="NY">NY</option>
+                        <option value="PA">PA</option>
                     </select>
                 </label>
           

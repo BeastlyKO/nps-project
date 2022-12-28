@@ -1,96 +1,74 @@
-﻿namespace nps_project.Models
+﻿#pragma warning disable
+
+namespace nps_project.Models
 {
     public class Park
     {
-#pragma warning disable CS8618 // Non-nullable property 'states' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+        //states which park can be found in
         public string states { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'states' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
-
-#pragma warning disable CS8618 // Non-nullable property 'weatherInfo' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+        
+        //weather information of park
         public string weatherInfo { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'weatherInfo' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
-
-#pragma warning disable CS8618 // Non-nullable property 'directionsInfo' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+ 
+        //information on directions to park
         public string directionsInfo { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'directionsInfo' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
-
-#pragma warning disable CS8618 // Non-nullable property 'addresses' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+ 
+        //list of addresses for park
         public List<Address> addresses { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'addresses' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
-
-#pragma warning disable CS8618 // Non-nullable property 'entranceFees' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+ 
+        //list of entrance fees
         public List<EntranceFee> entranceFees { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'entranceFees' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
-
-#pragma warning disable CS8618 // Non-nullable property 'topics' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+ 
+        //list of topics associated with park
         public List<Topic> topics { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'topics' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
-
-#pragma warning disable CS8618 // Non-nullable property 'name' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+ 
+        //Park name
         public string name { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'name' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
-
-#pragma warning disable CS8618 // Non-nullable property 'latitude' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+ 
+        //latitude of parks location
         public string latitude { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'latitude' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
-
-#pragma warning disable CS8618 // Non-nullable property 'activities' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+ 
+        //list of activities associated with park
         public List<Activity> activities { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'activities' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
 
-#pragma warning disable CS8618 // Non-nullable property 'operatingHours' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+        //list of operating hours for park
         public List<OperatingHours> operatingHours { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'operatingHours' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
 
-#pragma warning disable CS8618 // Non-nullable property 'url' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+        //URL for park website
         public string url { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'url' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
-
-#pragma warning disable CS8618 // Non-nullable property 'longitude' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+ 
+        //longitude of parks location
         public string longitude { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'longitude' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
-
-#pragma warning disable CS8618 // Non-nullable property 'contacts' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+ 
+        //list of contact information for park
         public ContactList contacts { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'contacts' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
-
-#pragma warning disable CS8618 // Non-nullable property 'entrancePasses' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+ 
+        //list of entrance passes for park
         public List<EntrancePass> entrancePasses { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'entrancePasses' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
-
-#pragma warning disable CS8618 // Non-nullable property 'parkCode' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+ 
+        //The park code associated to the park
         public string parkCode { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'parkCode' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
-
-#pragma warning disable CS8618 // Non-nullable property 'designation' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+        
+        //The park's designation
         public string designation { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'designation' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
 
-#pragma warning disable CS8618 // Non-nullable property 'images' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+        //List of images of the park
         public List<Image> images { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'images' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
 
-#pragma warning disable CS8618 // Non-nullable property 'fullName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+        //Full name of the park
         public string fullName { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'fullName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
-
-#pragma warning disable CS8618 // Non-nullable property 'latLong' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+ 
+        //Both longitude and latitdue of the park's location
         public string latLong { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'latLong' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
 
-#pragma warning disable CS8618 // Non-nullable property 'id' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+        //The park's id
         public string id { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'id' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
 
-#pragma warning disable CS8618 // Non-nullable property 'directionsUrl' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+        //URL for directions to the park
         public string directionsUrl { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'directionsUrl' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
 
-#pragma warning disable CS8618 // Non-nullable property 'desctiption' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+        //Description of the park
         public string desctiption { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'desctiption' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
-
-        // public List<Fee> fees { get; set; }
 
     }
 }

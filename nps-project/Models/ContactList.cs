@@ -1,16 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
+#pragma warning disable
 namespace nps_project.Models
 {
     public class ContactList
     {
-#pragma warning disable CS8618 // Non-nullable property 'phoneNumbers' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+        //list of phone numbers for park
         public List<PhoneNumber> phoneNumbers { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'phoneNumbers' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
-
-#pragma warning disable CS8618 // Non-nullable property 'emailAddresses' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+ 
+        //list of email addresses for park
         public List<EmailAddress> emailAddresses { get; set; }
-#pragma warning restore CS8618 // Non-nullable property 'emailAddresses' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
 
     }
 }
